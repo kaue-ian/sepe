@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>Calculadora</title>
+
+    <script>
+    </script>
+
+</head>
+
+<body>
+    
+    <div class="h1-box">
+        <h1>Calculadora de Investimentos</h1>
+    </div>
+
+    <div class="ul">
+        <button class="btn"><span>Tesouro Direto</span></button>
+        <button class="btn"><span>Certificado de Depósito Bancário (CDB)</span></button>
+        <button class="btn"><span>Debêntures</span></button>
+        <button class="btn"><span>Letra de Crédito Imobiliário (LCI)</span></button>
+    </div>
+
+    <div class="box">
+        
+    <form action="">
+        <div class="values vava">
+            <label for="valorApp">Valor da Aplicação</label>
+            <input type="number" id="valorApp">
+        </div>
+
+        <div class="values">
+            <label for="valorApp">Aporte Mensal</label>
+            <input type="number" id="valorApp">
+        </div>
+
+        <div class="values">
+            <label for="select">Prazo</label>
+            <div class="ibt">
+                <input type="number" class="inp" id="valorApp">
+                <select name="" id="select">
+                    <option value="meses">Meses</option>
+                    <option value="anos">Anos</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="values">
+            <label for="valorApp">Taxa de Imposto</label>
+            <input type="number" id="valorApp" placeholder="20 %">
+        </div>
+
+        <div class="values">
+            <label for="selectdois">Tipo de Rentabilidade</label>
+            <select name="selection" id="selectdois">
+                <option value="xxx" disabled selected="">Selecione</option>
+                <option value="pre">Pré-fixado</option>
+                <option value="pos">Pós-fixado</option>
+                <option value="ipca">IPCA+</option>
+            </select>
+        </div>
+
+        <div class="b-div">
+            <input type="button" class="button" value="Simular Investimento" onclick="Simular()">
+        </div>
+
+    </form>
+
+    <div class="box-gray">
+        <h2>Veja quanto seu patrimônio <div>pode render</div></h2>
+        <h3>Informe os valores ao lado para simular.</h3>
+    </div>
+</div>
+
+</body>
+
+</html>
