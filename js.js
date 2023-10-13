@@ -1,7 +1,5 @@
 function Simular() {
 
-
-    //Inputs
     const inicial = parseFloat(document.getElementById("valorApp").value);
     const prazo = parseInt(document.getElementById('prazo').value);
     const mensal = parseFloat(document.getElementById("aporteMensal").value);
@@ -15,7 +13,6 @@ function Simular() {
     let acumulado = inicial
     let total_acumulado = inicial + (mensal * prazo)
 
-    //botões
 
     const btn1 = document.getElementById("btn1");
     const btn2 = document.getElementById("btn2");
@@ -32,10 +29,10 @@ function Simular() {
 
     let valor_a_receber = total_acumulado + juros_compostos_total;
 
-    document.getElementById("inicial").innerHTML = inicial;
-    document.getElementById("mensal").innerHTML = mensal;
-    document.getElementById("duracao").innerHTML = prazo;
-    document.getElementById("tt_investimento").innerHTML = Number(total_acumulado).toFixed(2);
-    document.getElementById("juros_recebidos").innerHTML = Number(juros_compostos_total).toFixed(2);
-    document.getElementById("a_receber").innerHTML = Number(valor_a_receber).toFixed(2);
+    document.getElementById("inicial").innerHTML += inicial;
+    document.getElementById("mensal").innerHTML += mensal;
+    document.getElementById("duracao").innerHTML += prazo;
+    document.getElementById("tt_investimento").innerHTML += Number(total_acumulado).toFixed(2);
+    document.getElementById("juros_recebidos").innerHTML += Number(juros_compostos_total).toFixed(2);
+    document.getElementById("a_receber").innerHTML += Number(valor_a_receber).toFixed(2);
 }
