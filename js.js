@@ -3,6 +3,7 @@ function Simular() {
     const inicial = parseFloat(document.getElementById("valorApp").value);
     const prazo = parseInt(document.getElementById('prazo').value);
     const mensal = parseFloat(document.getElementById("aporteMensal").value);
+    const sp = document.querySelector('#selectp')
     const meses = document.getElementById("meses");
     const anos = document.getElementById("anos");
     const imposto = parseFloat(document.getElementById("imposto").value);
@@ -10,7 +11,12 @@ function Simular() {
     const posfix = document.getElementById("pos");
     const ipca = document.getElementById("ipca");
 
+
     let acumulado = inicial
+
+    if (sp.options == 1) {
+        alert('a')
+    }
     let total_acumulado = inicial + (mensal * prazo)
 
 
