@@ -4,7 +4,7 @@ function Simular() {
     const prazo = parseInt(document.getElementById('prazo').value);
     const mensal = parseFloat(document.getElementById("aporteMensal").value);
     const sp = document.querySelector('#selectp')
-    const imposto = parseFloat(document.getElementById("imposto").value);
+    const rendimento = document.getElementById('trendimento').value;
     const prefix = document.getElementById("pre");
     const posfix = document.getElementById("pos");
     const ipca = document.getElementById("ipca");
@@ -23,12 +23,12 @@ function Simular() {
         let juros_compostos_total = 0
 
         for (let i = 1; i < prazo; i++) {
-            juros_compostos = (acumulado + imposto) / 100;
-            juros_compostos_total += juros_compostos;
+            juros_compostos = (acumulado + rendimento) / 100;
+           
             acumulado += juros_compostos + mensal;
         }
 
-        let valor_a_receber = total_acumulado + juros_compostos_total;
+        let valor_a_receber = total_acumulado * rendimento;
 
         
     document.getElementById("inicial").style.display = 'block'
@@ -41,7 +41,7 @@ function Simular() {
     document.getElementById("mensal").innerHTML = 'Investimento Mensal: R$' + mensal;
     document.getElementById("duracao").innerHTML = 'Tempo do Investimento:' + prazo + ' mes(es)';
     document.getElementById("tt_investimento").innerHTML = 'Total do Investimento: R$' + Number(total_acumulado).toFixed(2);
-    document.getElementById("juros_recebidos").innerHTML = 'Juros Recebidos: R$' + Number(juros_compostos_total).toFixed(2);
+    document.getElementById("juros_recebidos").innerHTML = 'Juros Recebidos: R$' + Number(rendimento).toFixed(2);
     document.getElementById("a_receber").innerHTML = 'Valor a Receber c/ Juros: R$' + Number(valor_a_receber).toFixed(2);
     }
     else {
@@ -54,8 +54,8 @@ function Simular() {
         let juros_compostos_total = 0
 
         for (let i = 0; i < prazo; i++) {
-            juros_compostos = (acumulado + imposto) / 100;
-            juros_compostos_total += juros_compostos + 2;
+            juros_compostos = (acumulado + rendimento) / 100;
+            juros_compostos_total += juros_compostos;
             acumulado += juros_compostos + mensal;
         }
 
